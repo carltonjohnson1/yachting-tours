@@ -1,0 +1,480 @@
+/* Import of Montserrat font */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* ROOT */
+:root {
+
+    /* Colors */
+    --off-white: #e6e6e6;
+    --off-white-dark: #8d8b8b;
+    --body-bg: #32323c;
+    --section-dark-grey-bg: rgba(255, 255, 255, 0.2);
+    --white-hover: #b9b7b7;
+
+    /* border radius*/
+    --border-radius-s: 8px;
+    --border-radius-m: 20px;
+    --border-radius-l: 32px;
+    --border-radius-circle: 50%;
+}
+
+body {
+    background-color:var(--body-bg);
+    font-family: "Montserrat", sans-serif;
+    color: var(--off-white);
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--off-white);
+}
+
+
+h2 {
+    font-size: 1.4rem;
+    color: var(--off-white-dark);
+}
+
+/* Chapter Section Styling */
+.chapter-section {
+    background-color: var(--section-dark-grey-bg);
+    border-radius: var(--border-radius-s);
+    padding: 20px;
+    margin: 80px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-section h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: var(--off-white);
+    margin-bottom: 5px;
+    border-bottom: 2px solid var(--off-white);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.chapter-section p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;
+    color: var(--off-white);
+    line-height: 1.6;
+} 
+
+
+
+/* Navigation Styles */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0px;
+    z-index: 1000;
+    background-color: rgba(50, 50, 60, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--off-white);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--white-hover);
+    border-bottom: 2px solid var(--off-white);
+}
+
+
+/* Header Section Styles */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 60px;
+    background-image: url("../images/ship-sea-night.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header-content, .button-container {
+   z-index: 10; 
+   position: relative;
+}
+
+/* Header Section Styles - Button */
+
+button {
+    text-transform: uppercase;
+    position: relative;
+    border: none;
+    font-size: 1.125rem;
+    transform: 0.2s;
+    background-color: 0.2s;
+    outline: none;
+    border-radius: 3px;
+    margin: 0 10px;
+    padding: 23px 33px;
+    border: 3px solid transparent;
+}
+
+button:active {
+    transform: translate(3px);
+}
+
+button::after,
+button::after {
+    border-radius: 3px;
+}
+
+.shrink-border {
+    background-color: transparent;
+    color: var(--off-white-dark);
+   
+}
+
+.shrink-border:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--off-white);
+}
+
+.shrink-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #959595;
+    transition: opacity 0.3s, border 0.3s;
+}
+
+.shrink-border:hover::before {
+    opacity: 0;
+}
+
+.shrink-border::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 3px solid var(--off-white);
+    opacity: 0;
+    z-index: -1;
+    transform: scaleX(1.1) scaleY(1.3);
+    transition: opacity 0.3s, border 0.3s;
+}
+
+.shrink-border:hover::after {
+    opacity: 1;
+    transform: scaleX(1) scaleY(1);
+
+}
+
+/* Footer Section Styling */
+
+footer {
+    background-color:#1b1b20;
+    padding: 40px 0;
+    color: var(--off-white);
+}
+
+.footer-content {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--off-white);
+    text-decoration: none;
+    transform: color 0.3s; 
+}
+.footer-links a:hover {
+    color: var(--off-white-dark);
+    text-decoration: none;
+    transform: color 0.3s; 
+}
+
+.footer-social {
+    margin-top: 0;
+}
+
+
+.footer-social a {
+    color: var(--off-white);
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--off-white-dark);
+}
+
+
+/* Gallery Section Styles */
+
+#main-gallery-container {
+    margin-top: 50px;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 75vw;
+    margin: 20px auto;
+}
+
+figure {
+    margin: 10px;
+    padding: 0px;
+    position: relative;
+}
+
+figure img {
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px #ccc;
+    z-index: -1;
+    border: 3px solid 
+}
+
+figcaption {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    text-align: center;
+    color: #5e423f;
+    z-index: 1;
+    padding: 9px 0px 11px 0px;
+    font-size: 15px;
+    position: absolute;
+    bottom: 6px;
+}
+
+
+/* Contact Form Styles */
+
+
+.contact {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin: 80px auto;
+    max-width: 800px;
+    margin-bottom: 40vh;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact h2 {
+    font-size: 24px;
+    color: var(--off-white);
+    margin-bottom: 20px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contact form {
+    font-size: 18px;
+    color: var(--off-white);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact input {
+    font-size: 18px;
+    color: #848484;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Custom Table Styles */
+
+.chapter-section {
+
+}
+
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: var(--off-white);
+
+}
+
+.custom-table th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: var(--off-white);
+    text-align: left;
+}
+
+
+/* About Section */
+
+.two-column-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+
+}
+
+
+.column {
+    flex-basis: 48%;
+
+
+}
+.column img {
+    width: 100%;
+    height: auto;
+}
+
+.about-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    margin: 80px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.about-section h1 {
+    font-size: 24px;
+    color: var(--off-white);
+    line-height: 1.6;
+    margin: 0;
+    border-bottom: 2px solid var(--off-white);
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: var(--off-white);
+    line-height: 1.6;
+    margin: 0px;
+}
+
+/* Call to Action */
+
+.call-to-action {
+    background-color: rgba(75, 186, 253, 0.17);
+    text-align: center;
+    padding: 50px 20px;
+
+}
+
+
+/* Tour Section Styling */
+.tour-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.tour-button {
+    align-self: flex-end;
+}
+
+.tour-button-container {
+    text-align: right; /* Align the button to the right */
+    margin-top: 10px; /* Adjust margin as needed */
+}
+
+.tour-button {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1b1b20;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tour-button:hover {
+    background-color: #2b6289;
+}
+
+
+/* Responsive */
+
+
+@media screen and (max-width: 600px) {
+    figcaption {
+        font-size: 3vw;
+    }
+
+    #gallery {
+        grid-template-columns: 1fr;
+        width: 90vw;
+    }
+
+
+}
